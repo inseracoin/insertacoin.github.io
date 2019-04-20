@@ -19,13 +19,14 @@ sudo wget -P /etc/systemd/system/ https://github.com/insertacoin/iac_joystick/ra
 
 ## service start
 sudo systemctl daemon-reload
-sleep 5
+sleep 2
 sudo systemctl enable iacgamepad
-sleep 5
+sleep 2
 sudo systemctl start iacgamepad
-sleep 5
+sleep 2
 
-## include /boot/confit.txt stuff
+## include /boot/config.txt stuff
+echo "INCLUDING /boot/config.txt SETTINGS"
 sudo echo " " >> /boot/config.txt
 sudo echo " " >> /boot/config.txt
 sudo echo " " >> /boot/config.txt
@@ -56,9 +57,13 @@ sudo echo "# Disable false warning by power supply noise issue" >> /boot/config.
 sudo echo "# solved in revision 2" >> /boot/config.txt
 sudo echo "avoid_warnings=2" >> /boot/config.txt
 
+## set the audio output
+echo "SETTING AUDIO OUTPUT"
 amixer cset numid=3 1
 
 ## reboot
+echo "READY TO REBOOT!"
+sleep 5
 sudo reboot now
 
 
