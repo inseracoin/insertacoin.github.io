@@ -1,4 +1,14 @@
 #!/bin/sh
+###################################################################
+#  Script Name  :  insert a coin install script                                                                                             
+#  Description  :  install everything you need to use the 
+#                  insertaco.in rpi controller.
+#  Author       :  Alexandre Ribeiro de Sá
+#  Site         :  insertaco.in
+###################################################################
+#  LOG
+#  2019/04/17 @alexribeirodesa
+#             file created
 
 # download iacvga
 echo "INSTALLING INSERTACO.IN VGA OUTPUT"
