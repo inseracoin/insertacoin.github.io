@@ -1,17 +1,17 @@
 #!/bin/sh
 ###################################################################
-#  Script Name  :  insert a coin recalbox install script                                                                                             
+#  Script Name  :  insert a coin recalbox install script
 #  Description  :  install everything you need to use the 
-#                  insertaco.in rpi controller.
+#                  insertaco.in rpi interface.
 #  Author       :  Alexandre Ribeiro de Sá
-#  Site         :  insertaco.in
+#  Site         :  http://insertaco.in
 ###################################################################
 #  LOG
 #  2019/04/29 @alexribeirodesa
 #             file created
 
 # mount boot partition
-echo "REMOUNT PARTITION"
+echo "PARTITION REMOUNT"
 mount -o remount, rw /boot
 mount -o remount, rw /
 
@@ -23,21 +23,12 @@ sudo wget -P /boot/overlays/ https://github.com/insertacoin/iac_overlays/raw/mas
 # download iacgamepad
 echo "INSTALLING INSERTACO.IN GAMEPAD"
 ## update and install wiringpi
-#apt-get update
-#apt-get -y install wiringpi
+wget -p /usr/lib/ https://github.com/insertacoin/iac_joystick/raw/master/bin/libwiringPi.so
 
 ## download 
-#wget -P /bin/ https://github.com/insertacoin/iac_joystick/raw/master/bin/iacgamepad
-#chmod a+x /bin/iacgamepad
-#wget -P /etc/systemd/system/ https://github.com/insertacoin/iac_joystick/raw/master/service/iacgamepad.service
-
-## service start
-#systemctl daemon-reload
-#sleep 2
-#systemctl enable iacgamepad
-#sleep 2
-#systemctl start iacgamepad
-#sleep 2
+wget -P /bin/ https://github.com/insertacoin/iac_joystick/raw/master/bin/iacgamepad
+chmod a+x /bin/iacgamepad
+wget -P /etc/init.d/ https://github.com/insertacoin/iac_joystick/raw/master/service/99iacgamepad.sh
 
 ## include /boot/config.txt stuff
 echo "INCLUDING /boot/config.txt SETTINGS"
@@ -78,7 +69,7 @@ amixer cset numid=3 1
 ## reboot
 echo "READY TO REBOOT!"
 sleep 5
-sudo reboot
+reboot
 
 
 

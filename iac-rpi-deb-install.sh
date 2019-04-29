@@ -1,10 +1,10 @@
 #!/bin/sh
 ###################################################################
-#  Script Name  :  insert a coin install script                                                                                             
-#  Description  :  install everything you need to use the 
-#                  insertaco.in rpi controller.
+#  Script Name  :  insert a coin retropie/debian install script	
+#  Description  :  install everything you need to use the
+#                  insertaco.in rpi interface.
 #  Author       :  Alexandre Ribeiro de Sá
-#  Site         :  insertaco.in
+#  Site         :  http://insertaco.in
 ###################################################################
 #  LOG
 #  2019/04/17 @alexribeirodesa
