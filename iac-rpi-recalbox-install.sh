@@ -18,12 +18,12 @@ mount -o remount, rw /
 # download iacvga
 echo "INSTALLING INSERTACO.IN VGA OUTPUT"
 #download
-sudo wget -P /boot/overlays/ https://github.com/insertacoin/iac_overlays/raw/master/bin/iacvga-overlay.dtbo
+wget -P /boot/overlays/ https://github.com/insertacoin/iac_overlays/raw/master/bin/iacvga-overlay.dtbo
 
 # download iacgamepad
 echo "INSTALLING INSERTACO.IN GAMEPAD"
 ## update and install wiringpi
-wget -p /usr/lib/ https://github.com/insertacoin/iac_joystick/raw/master/bin/libwiringPi.so
+wget -o libwiringPi.so -p /usr/lib/ https://github.com/insertacoin/iac_joystick/raw/master/bin/libwiringPi.so
 
 ## download 
 wget -P /bin/ https://github.com/insertacoin/iac_joystick/raw/master/bin/iacgamepad
