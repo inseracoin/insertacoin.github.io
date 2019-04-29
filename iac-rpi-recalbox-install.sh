@@ -23,7 +23,7 @@ wget -P /boot/overlays/ https://github.com/insertacoin/iac_overlays/raw/master/b
 # download iacgamepad
 echo "INSTALLING INSERTACO.IN GAMEPAD"
 ## update and install wiringpi
-wget -o libwiringPi.so -p /usr/lib/ https://github.com/insertacoin/iac_joystick/raw/master/bin/libwiringPi.so
+wget -P /usr/lib/ https://github.com/insertacoin/iac_joystick/raw/master/bin/libwiringPi.so
 
 ## download 
 wget -P /bin/ https://github.com/insertacoin/iac_joystick/raw/master/bin/iacgamepad
