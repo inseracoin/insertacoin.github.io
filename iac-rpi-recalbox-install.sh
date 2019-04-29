@@ -28,7 +28,8 @@ wget -P /usr/lib/ https://github.com/insertacoin/iac_joystick/raw/master/bin/lib
 ## download 
 wget -P /bin/ https://github.com/insertacoin/iac_joystick/raw/master/bin/iacgamepad
 chmod a+x /bin/iacgamepad
-wget -P /etc/init.d/ https://github.com/insertacoin/iac_joystick/raw/master/service/99iacgamepad.sh
+wget -P /etc/init.d/ https://github.com/insertacoin/iac_joystick/raw/master/service/S99iacgamepad.sh
+chmod a+x /etc/init.d/S99iacgamepad.sh
 
 ## include /boot/config.txt stuff
 echo "INCLUDING /boot/config.txt SETTINGS"
