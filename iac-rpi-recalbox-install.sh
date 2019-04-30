@@ -70,4 +70,4 @@ amixer cset numid=3 1
 ## reboot
 echo "READY TO REBOOT!"
 sleep 5
-reboot
+reboot -f
