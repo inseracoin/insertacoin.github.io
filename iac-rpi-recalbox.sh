@@ -63,10 +63,6 @@ echo "# Disable false warning by power supply noise issue" >> /boot/config.txt
 echo "# solved in revision 2" >> /boot/config.txt
 echo "avoid_warnings=2" >> /boot/config.txt
 
-## set the audio output
-echo "SETTING AUDIO OUTPUT"
-amixer cset numid=3 1
-
 ## reboot
 echo "READY TO REBOOT!"
 sleep 5
